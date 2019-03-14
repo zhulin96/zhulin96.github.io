@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">   
+<link rel="shortcut icon"type="image/x-icon" href="../resource/image/golast.png" media="screen"  style="width:100px"/>
+<link rel="shortcut icon"type="image/x-icon" href="../resource/image/golast.png" media="screen"  style="width:100px"/>
+<title>WHUFFD深圳旅游推荐</title>
+<style>
+#loading { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+    z-index: 0;
+	background-color:
+	#FFF;
+	overflow:hidden;
+}
+
+.dropdown-menu{
+	max-width:25px;}
+</style>
+
+    <script>
+window.onload=function(){
+	  
+     $('#loading').remove(this);
+	
+}
+document.write('<div id="loading"><embed src="../resource/image/5.swf" style=" width:100%; height:100%"></embed></div>');
+</script>
+
+
+<script type="text/javascript" src="../admin/first1.php"></script>   
+
+
+
+
+<style>
+     #container{
+	width: 100%;
+	/* [disabled]height:100%; */		 
+		 
+		 }
+
+
+ #buttongroup1{
+		 position:fixed;
+		  height:20%;
+		  width:45%;
+		  left:5%;
+		  top:3%;
+	  }
+	  
+	 #buttongroup2{
+		   position:fixed;
+		  height:90%;
+		  width:30%;
+		  left:70%;
+		   top:3%;
+	  } 
+
+	 #buttongroup3{
+		  position:fixed;
+		  top:97%;
+		  height:20%;
+		  width:60%;
+		  left:93%;
+	  } 
+
+    .btn{
+		
+		size:10px;}
+		
+</style>
+</head>
+<link rel="stylesheet" href="../resource/dist/css/bootstrap.css">
+<script src="../resource/dist/js/jquery.min.js"></script>
+<script src="../resource/dist/js/bootstrap.min.js"></script>
+<script src="../resource/dist/js/holder.min.js"></script>
+<script src="../resource/dist/js/application.js"></script>
+
+<body style=" overflow:hidden">
+<iframe frameborder="0" width="0" height="0" id="frame" name="frame" src="graph.html" style="z-index:-188 ; border-left-style:dotted">
+</iframe>
+<iframe frameborder="0" width="0" height="0" id="frame1" name="frame1"></iframe>
+<div id="container" tabindex="0" >
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值&plugin=AMap.ToolBar"></script>
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0"/>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+
+<script>
+        $('#loading').width(0);
+	    $('#loading').height(0); 
+	     document.getElementById("loading").hidden;
+       
+	   if(data1.length<3)
+	   {
+		   
+		
+            window.location="first.php";  
+         }
+       function gj(){
+		    document.formsx.action="../admin/a/a0.php";
+		    document.formsx.submit();
+		   }
+
+
+        function gh(n){
+			  
+			   document.formsx.action="../admin/a/a"+n+".php";
+	           document.formsx.submit();
+	           document.getElementById("buttongroup1").style.width="42%";
+	           document.getElementById("buttongroup2").style.width="24%";
+               document.getElementById("buttongroup2").style.left="46%";
+               document.getElementById("buttongroup3").style.left="63%";
+	           $('#container').width('70%');
+	           document.getElementById("frame").style="height:100%;width:28%; top:0;left:70%;position:absolute;";
+	           window.frames["frame"].location.href="bar.html";
+			  
+			  
+			
+			}
+			
+			
+
+        function gt(n){
+			  
+			   document.formsx.action="../admin/a/a"+n+".php";
+	           document.formsx.submit();
+  	           document.getElementById("buttongroup1").style.width="42%";
+	           document.getElementById("buttongroup2").style.width="24%";
+               document.getElementById("buttongroup2").style.left="46%";
+               document.getElementById("buttongroup3").style.left="63%";
+	           $('#container').width('75%');
+	           document.getElementById("frame").style="height:100%;width:25%; top:0;left:77%;position:absolute;";
+	           window.frames["frame"].location.href="quyur.html";
+			  
+		}
+					
+ 	  
+		if(data100[1]==100){         
+        var mapObj = new AMap.Map('container',{resizeEnable: true,zoom:4});
+        var markers = []; //province见Demo引用的JS文件
+		var a=[];
+		for(var i=0;i<data1.length;i++)
+        {
+          b=[data1[i],data2[i]];
+          a.push(b);
+         } 
+		 
+	  	 
+	   var infoWindow = new AMap.InfoWindow({offset:new AMap.Pixel(0,-30),});
+
+	    function markerClick(e){
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(mapObj, e.target.getPosition());
+      }
+		
+		  var marker = new AMap.Marker({
+             position: a[0],
+			 icon:"../resource/image/1.png",
+             });
+             marker.setMap(mapObj);
+						 
+      		  marker.content="<h4>区域1 <span class='label label-info'>"+data4[0]+"</span> </h4>"+
+			                 "<div style='color:#00F; margin-top:-2' >—————————————————————<br></div>"+
+			                 "<h5>区域热度等级:\t\t\t\t"+data3[0]+"</h5>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b1'  id='b1' "+
+			  "onclick='gh(1)'>点击查看</a></h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b1'  id='b1'"+
+			  "onclick='gt(1)'>点击查看<a></h5>";
+               marker.on('click',markerClick);
+	           marker.emit('click',{target:marker});
+			 
+		   	 mapObj.setFitView();
+		
+		  for (var i = 1; i < a.length; i += 1){
+			 
+		
+    		
+			 var marker = new AMap.Marker({
+             position: a[i],
+			 icon:"../resource/image/"+(i+1)+".png",
+             });
+             marker.setMap(mapObj);
+			 
+			 			 
+      		  marker.content="<h4>区域"+(i+1)+" <span class='label label-info'>"+data4[i]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >—————————————————————<br></div>"+
+			                 "<h5>区域热度等级:   "+data3[i]+"<br></h5>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"'"+
+			  "onclick='gh("+(i+1)+")'>点击查看</a></h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"'"+
+			  "onclick='gt("+(i+1)+")'>点击查看</a></h5>";
+               marker.on('click',markerClick);
+	
+			 
+			 mapObj.setFitView();
+					
+         }
+    			markers.push(marker);
+		
+		}
+		
+		
+		
+		if(data100[1]==150)
+
+      {
+		   var mapObj = new AMap.Map('container',{resizeEnable: true,zoom:4});
+        var markers = []; //province见Demo引用的JS文件
+		var a=[];
+		for(var i=0;i<data1.length;i++)
+        {
+          b=[data1[i],data2[i]];
+          a.push(b);
+         } 
+		 
+	  	 
+	   var infoWindow = new AMap.InfoWindow({offset:new AMap.Pixel(0,-30)});
+
+	    function markerClick(e){
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(mapObj, e.target.getPosition());
+      }
+		
+		
+		 
+		 
+		 
+        
+		  for (var i = 0; i < a.length; i += 1){
+			 
+			 
+    		
+			 var marker = new AMap.Marker({
+             position: a[i],
+			 icon:"../resource/image/"+(i+1)+".png",
+             });
+             marker.setMap(mapObj);
+			 
+			 			 
+      		  marker.content="<h4>区域"+(i+1)+"<span class='label label-info'>"+data99[i]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"' "+
+			  "onclick='gh("+(i+1)+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"'"+
+			  "onclick='gt("+(i+1)+")'>点击查看</a></h5>";
+               marker.on('click',markerClick);
+	
+			 
+			 mapObj.setFitView();
+					
+         }
+		  
+	   	  var marker = new AMap.Marker({
+             position: a[data5[0]-1],
+			 icon:"../resource/image/start1.png",
+             });
+             marker.setMap(mapObj);
+			  marker.content="<h4>区域"+(data5[0])+"<span class='label label-info'>"+data99[data5[0]-1]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[0])+"'  id='b"+(data5[0])+"' "+
+			  "onclick='gh("+(data5[0])+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[0])+"'  id='b"+(data5[0])+"'"+
+			  "onclick='gt("+(data5[0])+")'>点击查看</a></h5>";
+               marker.on('click',markerClick);
+			 
+			 
+			 mapObj.setFitView();
+		  
+		    var marker = new AMap.Marker({
+             position: a[data5[data5.length-1]-1],
+			 icon:"../resource/image/end1.png",
+             });
+             marker.setMap(mapObj);
+			 
+			  marker.content="<h4>区域"+(data5[data5.length-1])+"<span class='label label-info'>"+data99[data5[data5.length-1]-1]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[data5.length-1])+"'  id='b"+(data5[data5.length-1])+"' "+
+			  "onclick='gh("+(data5[data5.length-1])+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[data5.length-1])+"'  id='b"+(data5[data5.length-1])+"'"+
+			  "onclick='gt("+(data5[data5.length-1])+")'>点击查看</a></h5>";
+			  marker.on('click',markerClick);
+			 mapObj.setFitView();
+		 
+		 
+		 
+    			markers.push(marker);
+				
+			var x=[];
+		for(var i=0;i<data3.length;i++)
+        {
+          b=[data3[i],data4[i]];
+          x.push(b);
+         } 	
+				
+				 
+       var polyline = new AMap.Polyline({
+        path:x,          //设置线覆盖物路径
+        strokeColor: "#3366FF", //线颜色
+        strokeOpacity: 1,       //线透明度
+        strokeWeight: 5,        //线宽
+        strokeStyle: "solid",   //线样式
+        strokeDasharray: [10, 5] //补充线样式
+        });
+        polyline.setMap(mapObj);
+   
+    	 mapObj.setFitView();					
+				
+		   
+	 }		
+		
+		
+if(data100[1]==160)                    //默认路线   
+
+      {
+		       var mapObj = new AMap.Map('container',{resizeEnable: true,zoom:4});
+        var markers = []; //province见Demo引用的JS文件
+		var a=[];
+		for(var i=0;i<data1.length;i++)
+        {
+          b=[data1[i],data2[i]];
+          a.push(b);
+         } 
+		 
+	  	 
+	   var infoWindow = new AMap.InfoWindow({offset:new AMap.Pixel(0,-30)});
+
+	    function markerClick(e){
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(mapObj, e.target.getPosition());
+      }
+		
+		
+		 
+		 
+		 
+        
+		  for (var i = 0; i < a.length; i += 1){
+			 
+			 
+    		
+			 var marker = new AMap.Marker({
+             position: a[i],
+			 icon:"../resource/image/"+(i+1)+".png",
+             });
+             marker.setMap(mapObj);
+			 
+		      marker.content="<h4>区域"+(i+1)+"<span class='label label-info'>"+data99[i]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"' "+
+			  "onclick='gh("+(i+1)+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(i+1)+"'  id='b"+(i+1)+"'"+
+			  "onclick='gt("+(i+1)+")'>点击查看</a></h5>";
+               marker.on('click',markerClick);
+	
+			 
+			 mapObj.setFitView();
+					
+         }
+		  
+	   	  var marker = new AMap.Marker({
+             position: a[data5[0]-1],
+			 icon:"../resource/image/start1.png",
+             });
+             marker.setMap(mapObj);
+			 
+			   marker.content="<h4>区域"+(data5[0])+"<span class='label label-info'>"+data99[data5[0]-1]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[0])+"'  id='b"+(data5[0])+"' "+
+			  "onclick='gh("+(data5[0])+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[0])+"'  id='b"+(data5[0])+"'"+
+			  "onclick='gt("+(data5[0])+")'>点击查看</a></h5>";
+			 marker.on('click',markerClick);
+			 mapObj.setFitView();
+		  
+		    var marker = new AMap.Marker({
+             position: a[data5[data5.length-1]-1],
+			 icon:"../resource/image/end1.png",
+             });
+             marker.setMap(mapObj);
+			 
+			   marker.content="<h4>区域"+(data5[data5.length-1])+"<span class='label label-info'>"+data99[data5[data5.length-1]-1]+"</span></h4>"+
+			                  "<div style='color:#00F; margin-top:-2' >———————————————————<br></div>"+
+			  "<h5>区域功能分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[data5.length-1])+"'  id='b"+(data5[data5.length-1])+"' "+
+			  "onclick='gh("+(data5[data5.length-1])+")'>点击查看</a>"+"</h5>"+
+			  "<h5>区域时间分布图"+"&nbsp;	 &nbsp;	 &nbsp;<a name='b"+(data5[data5.length-1])+"'  id='b"+(data5[data5.length-1])+"'"+
+			  "onclick='gt("+(data5[data5.length-1])+")'>点击查看</a></h5>";
+			 marker.on('click',markerClick);
+			 mapObj.setFitView();
+		 
+		 
+		 
+    			markers.push(marker);
+				
+			var x=[];
+		for(var i=0;i<data3.length;i++)
+        {
+          b=[data3[i],data4[i]];
+          x.push(b);
+         } 	
+				
+				 
+       var polyline = new AMap.Polyline({
+        path:x,          //设置线覆盖物路径
+        strokeColor: "#3366FF", //线颜色
+        strokeOpacity: 1,       //线透明度
+        strokeWeight: 5,        //线宽
+        strokeStyle: "solid",   //线样式
+        strokeDasharray: [10, 5] //补充线样式
+        });
+        polyline.setMap(mapObj);
+   
+    	 mapObj.setFitView();	
+		 
+		 
+		  	
+	  }
+	  
+	  
+				
+				
+</script>
+ <div class="container" >
+       <form id="formsx" name="formsx" action="../admin/a/a21.php" target="frame1"  hidden="">
+          <select name="passid" id="passid" class="form-control">
+             <option value="1" selected="selected"></option>
+          </select>
+       </form>
+       <div class="btn-group btn-group-lg" id="buttongroup1" >
+       <button type="button"  id="button1" class="btn btn-default" onclick="window.location='../admin/returns.php'">选择属性</button>
+       
+       <button type="button"  id="button2" class="btn btn-default" >区域信息</button>
+    
+	   <div class="btn-group btn-group-lg" >
+				<button class='btn btn-default btn-group-lg' data-toggle='dropdown'>推荐路线<span class="caret"></span></button>
+				<ul class="dropdown-menu" >
+					<li><a id="a1" >推荐路线1</a></li>
+					<li><a id="a2">推荐路线2</a></li>
+					<li ><a id="a3">推荐路线3</a></li>
+				
+				</ul>
+	</div>
+       
+    <button type="button"  id="button4" class="btn btn-default">自定义路线</button>
+       
+</div> 
+ <div class="btn-group btn-group-lg" id="buttongroup2">
+   <button type="button"  id="button5" class="btn btn-default" onclick="window.location='../index.php'">首页</button>
+   <button type="button"  id="button5" class="btn btn-default" onclick="window.location='help.html'">使用帮助</button>
+   <button type="button"  id="button5" class="btn btn-default" onclick="window.location='readme.html'">团队介绍</button>
+ </div> 
+       <div  class="btn-group btn-group-lg" id="buttongroup3">
+             <img src="../resource/image/logo.png" style="width:10%; height:10%">
+      </div>
+</div>
+
+</div>
+
+
+<script>
+ $('#button2').click(function(){
+	   document.formsx.action="../admin/a/a21.php";
+	   document.formsx.submit();
+	     document.getElementById("buttongroup1").style.width="42%";
+	  document.getElementById("buttongroup2").style.width="24%";
+     document.getElementById("buttongroup2").style.left="46%";
+      document.getElementById("buttongroup3").style.left="63%";
+	   $('#container').width('70%');
+	  document.getElementById("frame").style="height:100%;width:30%; top:0;left:70%;position:absolute;";
+	  window.frames["frame"].location.href="graph3.html";
+	  
+	  
+});
+
+$('#button4').click(function(){
+	   document.formsx.action="../admin/a/a23.php";       //自定义路线
+	   document.formsx.submit();
+	  document.getElementById("buttongroup1").style.width="42%";
+	  document.getElementById("buttongroup2").style.width="24%";
+     document.getElementById("buttongroup2").style.left="46%";
+      document.getElementById("buttongroup3").style.left="63%";
+	   $('#container').width('70%');
+	  document.getElementById("frame").style="height:100%;width:30%; top:0;left:70%;position:absolute;";
+	  window.frames["frame"].location.href="graph.html";
+	
+});
+
+
+
+$('#a1').click(function(){
+	   document.formsx.action="../admin/a/a24.php";       //推荐路线1
+	   document.formsx.submit();
+
+	  window.location.href="first1.html";
+});
+
+$('#a2').click(function(){
+	   document.formsx.action="../admin/a/a25.php";       //推荐路线2
+	   document.formsx.submit();
+	   window.location.href="first1.html";
+	
+});
+
+
+$('#a3').click(function(){
+	   document.formsx.action="../admin/a/a26.php";       //推荐路线3
+	   document.formsx.submit();
+	    window.location.href="first1.html";
+	
+});
+</script>
+</body>
+
+<script>
+  if(data100[1]==160)
+  {
+	   document.getElementById("buttongroup1").style.width="42%";
+	  document.getElementById("buttongroup2").style.width="24%";
+     document.getElementById("buttongroup2").style.left="46%";
+      document.getElementById("buttongroup3").style.left="63%";
+	  $('#container').width('70%');
+	  document.getElementById("frame").style="height:100%;width:30%; top:0;left:70%;position:absolute;" ;
+	 
+	  window.frames["frame"].location.href="time234.html"; 
+ }
+
+</script>
+</html>

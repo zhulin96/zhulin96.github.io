@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon"type="image/x-icon" href="../resource/image/golast.png" media="screen"  style="width:100px"/>
+<title>WHUFFD深圳旅游推荐</title>
+<link rel="stylesheet" href="../resource/dist/css/bootstrap.css">
+<script src="../resource/dist/js/jquery.min.js"></script>
+<script src="../resource/dist/js/bootstrap.min.js"></script>
+<script src="../resource/dist/js/holder.min.js"></script>
+<script src="../resource/dist/js/application.js"></script>
+<script type="text/javascript" src="../admin/graph.php"></script>  
+
+
+
+<script>
+
+ 
+ var txt='<div class="container">'+
+		'<table class="table table-hover">'+
+			'<tr>'+
+				'<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能</th>'+
+				'<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主要区域</th>'+
+			'</tr>';
+			
+		for(var i=1;i<data2.length;i++)
+		  {
+			  txt=txt+'<tr>'+'<th><img src="../resource/icon/'+i+'.ico">'+data2[i]+'</th>'+'<th>';
+			  if(data3[i].length<4){
+			  
+			  for(var y=0;y<data3[i].length;y++)
+			  {
+				  if(data3[i][y]!=1000){
+				  txt=txt+'&nbsp;&nbsp;&nbsp;&nbsp;'+'<img   id="'+(20*i+y)+'" src="../resource/image/b'+data3[i][y]+'.png">';              }
+				  
+			  }
+			  }
+			  
+			    if(data3[i].length>3)
+			  {
+				    for(var y=0;y<3;y++)
+			    {
+				  txt=txt+'&nbsp;&nbsp;&nbsp;&nbsp;'+'<img   id="'+(20*i+y)+'" src="../resource/image/b'+data3[i][y]+'.png">';
+				  
+			    }
+				  
+			  }
+			  
+			  
+			  
+			  
+			  txt=txt+'</th>'+'</tr>';
+			 
+			  
+			
+			  
+	    }	
+		
+	
+		
+		 txt=txt+'<tr>'+'<th><img src="../resource/icon/'+15+'.ico">'+data2[0]+'</th>'+'<th>';
+		 
+		    if(data3[0].length<4){
+			  
+			  for(var y=0;y<data3[0].length;y++)
+			  {
+				   if(data3[0][0]!=1000){
+				  txt=txt+'&nbsp;&nbsp;&nbsp;&nbsp;'+'<img id="'+y+'" src="../resource/image/b'+data3[0][y]+'.png">';
+				   }
+			  }
+			}
+			
+			if(data3[0].length>3){
+				  for(var y=0;y<3;y++)
+			  {
+				  txt=txt+'&nbsp;&nbsp;&nbsp;&nbsp;'+'<img id="'+y+'" src="../resource/image/b'+data3[0][y]+'.png">';
+				  
+			  }
+			
+			}
+			
+			  txt=txt+'</th>'+'</tr>';
+			  
+		
+		
+		
+		
+		
+		
+		
+		   txt=txt+'	</table>'+	
+	   '</div>';
+	
+		   $(document).ready(function(){
+			   
+              $("#ert").append(txt); 
+		 
+		 
+		  for(var i=0;i<data2.length;i++)
+		   {
+			   if(data3[i].length<4){
+			   
+		       for(var y=0;y<data3[i].length;y++)
+			   {
+				   
+				   $('#'+(20*i+y)).tooltip({
+		
+	                'title':data4[i][y],
+	               'placement':'bottom',
+                   });
+				  
+			   }
+			   }
+			   
+			    if(data3[i].length>3){
+			   
+		       for(var y=0;y<3;y++)
+			   {
+				   $('#'+(20*i+y)).tooltip({
+		
+	                'title':data4[i][y],
+	               'placement':'bottom',
+                   });
+				  
+			   }
+			   }
+			  
+	 	}
+		});
+
+
+</script>
+
+
+
+</head>
+
+<body id="ert" >
+<div align="center"><h3><b>各功能热点区域</b></h3></div>
+</body>
+</html>

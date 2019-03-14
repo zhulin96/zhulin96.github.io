@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon"type="image/x-icon" href="../resource/image/golast.png" media="screen"  style="width:100px"/>
+<title>WHUFFD深圳旅游推荐</title>
+<script src="../resource/dist/js/jquery.min.js"></script>
+<script src="../resource/dist/js/bootstrap.min.js"></script>
+<script src="../resource/dist/js/holder.min.js"></script>
+<script src="../resource/dist/js/application.js"></script>
+<script src="../admin/graph.php"></script>
+<link rel="stylesheet" href="../resource/dist/css/bootstrap.min.css">
+
+<style>
+  .container{
+	  
+	  
+	  
+	  border-color:#06F;
+	  border-width:medium;
+	 }
+    
+
+  .form-group{
+	  display:block;
+	  font:"微软雅黑";
+	  font-size:18px;
+	  border-color:#09F;
+	  border-width:medium;
+	}	
+ .th{
+	 color:#999;
+	}  
+ .tr{
+	 color:#CCC;
+	 size:0}	
+	
+	 html {
+-ms-overflow-style:none;
+overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px}
+</style>
+<script>
+if(data1[1]==23)     //自定义路线
+	  {
+		 
+		   var txt='<div class="form-group">'+
+ '<h3 class=""><b>今日热点区域：</b></h3><ul><li><img src="../resource/image/b'+data6[0]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style=" font-size:36px"><i><img src="../resource/image/h1.png"><span style=" color:#F00"><b>'+data5[0]+'</b></span></i></span></li><li>\t\t\t<img src="../resource/image/b'+data6[1]+
+ '.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style=" font-size:36px"><i><img src="../resource/image/g3.png"></img><span style=" color:#F00"><b>'+data5[1]+
+			 '</b></span></i></span></li><li>\t\t\t'+
+            '<img src="../resource/image/b'+data6[2]+'.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span  style=" font-size:36px"><i><img src="../resource/image/g1.png"><span style=" color:#F00"><b>'+data5[2]+'</b></span></i></span></li> </ul>'
+			'</div>';
+			
+		txt=txt+'<span class="tr">———————————————————————————————————————</span>';	
+			
+		 txt=txt+
+		     '<div><h3><b>今日热点线路：</b></h3><ul><li><img src="../resource/image/b'+data7[0]+'.png"><span style=" color:#00f"><img src="../resource/image/gaga.png"></img></span><img src="../resource/image/b'+data8[0]+'.png">&nbsp;&nbsp;&nbsp;<span  style=" font-size:36px"><i><img src="../resource/image/h1.png"><span style=" color:#F00"><b>'+data9[0]+
+			 '</b></span></i></span></li><li><img src="../resource/image/b'+data7[1]+'.png"><span style=" color:#00f"><img src="../resource/image/gaga.png"></img></span><img src="../resource/image/b'+data8[1]+'.png">&nbsp;&nbsp;&nbsp;<span  style=" font-size:36px"><i><img src="../resource/image/g3.png"><span style=" color:#F00"><b>'+data9[1]+'</b></span></i></span></li></ul>'+
+			 '</div>'   ;    
+			
+		txt=txt+'<span class="tr">———————————————————————————————————————</span>';
+		f1=Math.ceil(data3.length/2);
+	    f2=Math.ceil(data3.length/3)
+			
+		
+			    txt=txt+'<div class="panel-group" id="accordion">'+
+		  '<div class="panel panel-default">'+
+		    '<div class="panel-heading">'+
+		      '<h4 class="panel-title">'+
+		        '<a data-parent="#accordion" href="#collapseOne">'+
+				 '<h3><b>请选择路线起点：</b></h3>'+
+				 '</a>'+
+		      '</h4>'+
+		    '</div>'+
+		    '<div id="collapseOne" class="panel-collapse collapse">'+
+		      '<div class="panel-body"><p>';
+				 
+				 ;
+				 txt=txt+
+	                     '<input type="radio"    class="xdd" name="tname" value="'+(1)+'" onclick="xzz(1)">区域'+(1)+'</label>';
+				for(var i=1;i<data3.length;i++)
+				   {   
+					    if(i%f2)
+						 {txt=txt+
+	                     '<input type="radio"  class="xdd"  name="tname" value="'+(i+1)+'" onclick="xzz('+(i+1)+')">区域'+(i+1)+'</label>';}
+						 else
+						 {
+							 txt=txt+'</p><p>'+
+	                        '<input type="radio"  class="xdd" name="tname" value="'+(i+1)+'" onclick="xzz('+(i+1)+')">区域'+(i+1)+'</label>';
+							 
+						  }
+					   
+				   }
+				   
+				   
+				      txt=txt+'</p>'+' </div>'+'</div>'+
+		    '</div>'+
+
+		  '<div class="panel panel-default">'+
+		      '<div class="panel-heading">'+
+		       ' <h4 class="panel-title">'+
+		          '<a  data-parent="#accordion" href="#collapseTwo"  >';
+					  
+					  
+				txt=txt+'<h3><b>请选择感兴趣的区域：</b>' +  ' </h3></a>'+
+		        '</h4>'+
+		      '</div>'+
+		      '<div id="collapseTwo" class="panel-collapse collapse ">'+
+		        '<div class="panel-body">' ; 	 
+				
+				txt=txt+ '<p>'+
+	                 '</h5><input type="checkbox"  id="inlineCheckbox1" name="checkbox[]" value="'+(1)+'">区域'+(1)+'</label></h5>';
+				
+			    for(var i=1;i<data3.length;i++)
+				   {
+					    if(i%f2) {	 txt=txt+
+	                '<input type="checkbox" id="inlineCheckbox1" name="checkbox[]" value="'+(i+1)+'">区域'+(i+1)+'</label>';}
+						 else
+						 {
+							 txt=txt+	   '</p><p>'+
+	                 '<input type="checkbox" id="inlineCheckbox1" name="checkbox[]" value="'+(i+1)+'">区域'+(i+1)+'</label>';
+							 
+						  }
+					   
+				   }
+				    txt=txt+'</p>  </div>'+
+		     ' </div>'+
+		    '</div>	'+
+		   '</div>';
+				 
+		
+		
+		
+		
+		
+		
+		
+			
+				 
+        txt=txt+	'<br><div class="form-group">'+
+				'<input type="submit" value="确定" class="btn btn-primary " id="acv">'+
+				'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+
+				'<input type="reset" value="取消"  class="btn btn-default">'+'</div>';
+			
+			
+		   $(document).ready(function(){
+            $("form").append(txt); 
+		 
+		 
+		   
+		});
+
+
+   function xzz(x){
+		 
+		 
+	       var  box=document.getElementsByName("checkbox[]");
+		   for(var g=0;g<box.length;g++)
+		   
+		   {
+			   box[g].disabled=false;
+		   }
+	       
+	       box[x-1].disabled="disabled";
+	   
+	   }
+     
+
+
+     
+	setTimeout(function(){ $("#acv").click(function(){
+	    var flag = 0;
+		 var ff=0;
+		$ax=document.getElementById("form").getElementsByClassName("xdd");
+		
+		 for (var i = 0; i < $ax.length; i++)
+		 {
+			 if($ax[i].checked==true)
+			  {
+				  ff=ff+1;
+			  }
+		 }
+		
+	 	if(ff==0)
+		{
+	 	   alert("请选择一个起点");	
+		   return false;
+		}
+	  	
+		else{
+        var _radio = document.getElementById("form").getElementsByTagName("input");//获取单选框集合
+        for (var i = 0; i < _radio.length; i++)
+            if (_radio[i].checked == true) {
+                flag = flag+1;
+            }
+        if (flag<3) {
+            alert("请至少选择两个区域");
+            return false;
+        }
+}
+	 
+	  window.parent.location.href="first1.html";
+ })},1000);
+}
+		
+setTimeout(function(){ 
+	$('a').click(function(){
+	val=$(this).attr('href');
+	$(val).slideToggle(1000);
+});},2000);
+
+	
+		
+		
+		
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+<iframe style="width:0; height:0  "  name="appr" ></iframe>
+ <div class="container">
+	
+      <div class="col-md-1">
+      </div>
+   
+      <form action="../admin/catch_area.php" target="appr" name="form" id="form" method="post"  >      
+       </form>
+   
+</div>
+
+</body>
+
+
+
+
+<script>
+
+
+
+</script>
+
+
+</html>
+
+
+
